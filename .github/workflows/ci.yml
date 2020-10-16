@@ -1,6 +1,6 @@
 name: First workflow
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
   build:
@@ -17,5 +17,5 @@ jobs:
           JOB_CONTEXT: ${{ toJson(job) }}
         run: |
           echo "Job Context: $JOB_CONTEXT"
-          echo "Esta genial!"
+          echo "Done!"
           echo "Done!"
